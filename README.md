@@ -9,3 +9,8 @@
 - Entra na pasta do projeto
 - npm install
 
+## Habilitar debug remoto
+- ctrl + m, no emulador
+  - debug JS remotely
+  - ele abre uma inst^ncia do chrome
+  - é só abrior o console agora
