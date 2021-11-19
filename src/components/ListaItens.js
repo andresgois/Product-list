@@ -11,24 +11,24 @@ export default class ListaItens extends Component {
     this.state = { listaItens: [] };
   }
 
-  componentWillUnmount(){
-    // axios.get('https://jsonplaceholder.typicode.com/posts')
-    //       .then( response => { 
-    //         this.setState({ listaItens: response}); 
-    //       })
-    //       .catch( () => { console.log('Erro ao recuperar dados'); })
-    api.get('/posts')
-        .then((response) => {
-          console.log(response.data)
+  componentDidMount(){
+    api.get('?brand=covergirl&product_type=lipstick')
+        .then( res => {
+          let dados = res.data
+          this.setState({listaItens: dados})
         })
         .catch( (e) => console.error("OPS!, Ocorreu um erro", e))
   }
 
   render(){
-    //console.log(this.state.listaItens)
+    
     return(
       <View>
-        <Text>API</Text>
+        {
+          this.state.listaItens.map( lista =>  (
+            <Text key={lista.id}>{lista.name}</Text>
+          ))
+        }
       </View>
     );
   }
