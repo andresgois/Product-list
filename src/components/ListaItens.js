@@ -35,6 +35,6 @@ export default class ListaItens extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ab78da'
+    backgroundColor: '#ab78da',
   }
 })

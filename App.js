@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import { StyleSheet, View } from "react-native";
+import Footer from "./src/components/Footer.js";
 import ListaItens from "./src/components/ListaItens.js";
+import Navbar from "./src/components/Navbar.js";
 
 class App extends Component {
 
@@ -7,9 +10,32 @@ class App extends Component {
   render(){
 
     return(
-      <ListaItens />
+      <View style={styles.container}>
+        <Navbar style={styles.nav} />
+        <ListaItens style={styles.lista} />
+        <Footer style={styles.footer} />
+      </View>
     );
   }
 }
 
 export default App;
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+  },
+  nav: {
+    flex: 2,
+    backgroundColor: '#400080',
+    height: 200,
+  },
+  lista:{
+    flex: 6,
+  },
+  footer: {
+    flex: 2,
+    backgroundColor: '#400080',
+    height: 20,
+  }
+})
