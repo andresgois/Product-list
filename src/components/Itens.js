@@ -10,7 +10,7 @@ constructor(props){
 
  render(){
    return(
-    <View style={[style.card, style.shadowProp]}>
+    <View style={style.card}>
       <Image style={style.img} source={{ uri: this.props.item.image_link}} />
       <View style={style.info}>
         <Text style={style.name}>{this.props.item.name}</Text>
@@ -27,33 +27,19 @@ export default Itens;
 const style=StyleSheet.create({
   card: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    alignContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#f7f7f7',
     borderRadius: 8,
     paddingVertical: 5,
     paddingHorizontal: 25,
-    width: '90%',
-    marginVertical: 10,
-  },
-  shadowProp: {
-    shadowColor: '#ccc',
-    shadowOffset: {width: -2, height: 10},
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
+    marginVertical: 10, 
+    marginHorizontal: 10,   
   },
   img: {
     height: 100, 
     width: 100,
     backgroundColor: 'white',
-    shadowColor: 'black',
-    shadowOpacity: 0.8,
-    shadowRadius: 5,
-    shadowOffset: { height: 1, width: 10},
     borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#ccc',
   },
   info: {
     flex: 1,

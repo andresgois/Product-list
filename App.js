@@ -23,12 +23,11 @@ export default App;
 
 const styles = StyleSheet.create({
   container:{
-    flex: 1,
+    flex: 10,
   },
   nav: {
     flex: 2,
-    backgroundColor: '#400080',
-    height: 200,
+    backgroundColor: '#fff',
   },
   lista:{
     flex: 6,
@@ -36,6 +35,5 @@ const styles = StyleSheet.create({
   footer: {
     flex: 2,
     backgroundColor: '#400080',
-    height: 20,
   }
 })
